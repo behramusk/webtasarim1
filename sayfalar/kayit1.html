@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıtlar</title>
+    <link rel="shortcut icon" href="../resimler/icon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <h1 align="center">Kayıt Onaylandı</h1>
+
+    
+    <div align="center" style="margin-top: 20px;">
+        <script>
+            var degerler = new URLSearchParams(window.location.search);
+            var isim = degerler.get('isim');
+            var eposta = degerler.get('eposta');
+            var telefon = degerler.get('telefon');
+            var yas = degerler.get('yas');
+            var cinsiyet = degerler.get('cinsiyet');
+            var favori = degerler.get('favori');
+
+            document.write("<p><strong>Adınız:</strong> " + isim + "</p>");
+            document.write("<p><strong>E-Posta:</strong> " + eposta + "</p>");
+            document.write("<p><strong>Telefon:</strong> " + telefon + "</p>");
+            document.write("<p><strong>Yaş:</strong> " + yas + "</p>");
+            document.write("<p><strong>Cinsiyet:</strong> " + (cinsiyet == "e" ? "Erkek" : "Kadın") + "</p>");
+            document.write("<p><strong>Favori Dövüşçünüz:</strong> " + favori + "</p>");
+        </script>
+    </div>
+
+    
+    <br>
+    <div align="center">
+        <a href="fighters.html" style="color: black;">Dövüşçüler Sayfasına Geri Dön</a>
+    </div>
+</body>
+</html>
