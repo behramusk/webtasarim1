@@ -1,0 +1,17 @@
+/* Tablo stilleri */
+table, th, td {
+    border: 1px solid black;
+}
+
+/* Metinleri ortalamak için */
+.center {
+    text-align: center;
+}
+
+/* Tabloyu ortalamak için */
+table {
+    margin: 0 auto;
+}
+.nav-link {
+    color: black;
+}

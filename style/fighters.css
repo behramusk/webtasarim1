@@ -1,0 +1,21 @@
+/* Genel merkezleme için */
+.center {
+    text-align: center;
+}
+
+/* Form container stili */
+.form-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* List container stili */
+.list-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Navigasyon linkleri stili */
+.nav-link {
+    color: black;
+}

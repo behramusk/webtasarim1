@@ -1,0 +1,9 @@
+/* Genel merkezleme için */
+.center {
+    text-align: center;
+}
+
+/* Navigasyon linkleri için stil */
+.nav-link {
+    color: black;
+}
