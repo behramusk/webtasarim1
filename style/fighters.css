@@ -1,21 +1,21 @@
-/* Genel merkezleme için */
-.center {
-    text-align: center;
+/* ortalancak yazılar için */
+.ortalama {
+    text-align: center; /* text-align : center yazıyı ortalamaya yarıyor */
 }
 
-/* Form container stili */
-.form-container {
+/* Form yerinin düzenlemesi . girdiler ortalandı*/
+.form01 {
     text-align: center;
-    margin-top: 20px;
+    
 }
 
-/* List container stili */
-.list-container {
+/* dövüşçüler yeri . yazıları ortaladık */
+.dövüscüler {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 30px; /* yazının diğer elementler ile arasına boşluk bıraktım iç içe girmesin diye */
 }
 
 /* Navigasyon linkleri stili */
-.nav-link {
+.navigasyon {
     color: black;
 }
