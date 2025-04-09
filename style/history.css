@@ -1,9 +1,9 @@
-/* Genel merkezleme için */
-.center {
+/* ortalama için */
+.ortalama {
     text-align: center;
 }
 
-/* Navigasyon linkleri için stil */
-.nav-link {
+/* Navigasyon linkleri rengi */
+.navigasyon {
     color: black;
 }
