@@ -4,14 +4,15 @@ table, th, td {
 }
 
 /* Metinleri ortalamak için */
-.center {
+.ortalama {
     text-align: center;
 }
 
-/* Tabloyu ortalamak için */
+/* Tabloyu ortalamak için  . tek tek left right yapmadım çünkü bulamadım. auto otomatik ortaladı*/
 table {
-    margin: 0 auto;
+   margin: auto;
+   
 }
-.nav-link {
+.navigasyon {
     color: black;
 }
