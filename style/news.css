@@ -1,42 +1,36 @@
 /* Body arka plan rengi */
 body {
-    background-color: white;
+    background-color: rgb(168, 166, 181);
 }
 
 /* Genel merkezleme için */
-.center {
+.ortalama {
     text-align: center;
+    
 }
 
-/* Başlık stili */
-.title {
+/* ufc haberi yazısı ortalama */
+.baslik {
     text-align: center;
     font-size: 30px;
 }
 
-/* Haberler container stili */
-.news-container {
+/* haber başlıkları */
+.haber-basliklari {
     text-align: center;
     margin-top: 50px;
+    font-size: 20px;
+    
 }
 
-/* Her haber bloğu stili */
-.news-item {
-    display: inline-block;
+/* haberlerin resimleri ortaladık */
+.haber-tiklama {
     margin-right: 20px;
 }
 
-/* Haber başlıkları stili */
-.news-title {
-    font-size: 20px;
-}
 
-/* Not bölümü stili */
-.note p {
-    font-size: 16px;
-}
 
 /* Navigasyon linkleri stili */
-.nav-link {
+.navigasyon {
     color: black;
 }
