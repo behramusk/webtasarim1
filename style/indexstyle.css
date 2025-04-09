@@ -1,8 +1,7 @@
 body {
     background-image: url('../resimler/arkaplan.jpg');
-    background-size: cover;
-    background-position: center 20%;
-    background-attachment: fixed;
+    background-position: center 20%; /* resimi tam ortaladım */
+    background-attachment: fixed; /* arkaplan resmi haraket etmesin diye */
     color: white;
     text-align: center;
     padding-top: 250px;
@@ -11,28 +10,26 @@ body {
 
 h1 {
     font-size: 60px;
-    text-shadow: 2px 2px 4px black;
+   
     margin-top: 0;
 }
 
 p {
     font-size: 24px;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 1px black; /* buraya yazının arkasına gölge ekledim çünkü resimden dolayı tam gözükmüyor*/ 
 }
 
 a {
     color: white;
     text-decoration: none;
-    text-shadow: 1px 1px 2px black;
+   
 }
 
-.contact {
-    position: fixed;
+.iletişim {
+    
     bottom: 0;
     right: 0;
     padding: 10px;
 }
 
-.logo {
-    margin-bottom: 0;
-}
+
