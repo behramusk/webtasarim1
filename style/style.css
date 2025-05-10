@@ -1,0 +1,855 @@
+/* Genel stiller: Tüm sayfalar için temel ayarlar */
+/* '*' tüm etiketleri seçer, margin ve padding'i sıfırlar, box-sizing ile boyut hesaplamasını düzenler */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Ana sayfa için arka plan resmi */
+.index-body {
+    background-image: url('../resimler/arkaplan.jpg');
+    background-size: cover; /* Resim ekranı kaplar */
+    background-position: center; /* Resim ortalanır */
+    background-repeat: no-repeat; /* Resim tekrar etmez */
+    background-attachment: fixed; /* Resim kaydırma sırasında sabit kalır */
+}
+
+/* body: Genel yazı tipi, arka plan rengi ve metin ayarları */
+/* background-color: Hafif gri, göz yormaz */
+/* color: Varsayılan metin rengi koyu gri */
+/* line-height: Satır aralığı, okunabilirlik için */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Sayfayı tam yüksekliğe zorlar, footer'ı alta sabitler */
+/* display: flex ve min-height: 100vh ile sayfa yüksekliği ekranı kaplar */
+/* flex-direction: column ile içerikler dikey sıralanır */
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* main: Ana içeriği esnek yapar, footer'ı alta iter */
+/* flex: 1 ile ana içerik kalan alanı doldurur */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Navigasyon çubuğu: En üstte sabit */
+/* background-color: Koyu gri, profesyonel görünüm */
+/* position: fixed ile çubuk her zaman üstte kalır */
+/* width: 100% ekranın tamamını kaplar */
+/* top: 0 ile üst kenara sabitlenir */
+/* z-index: 1000 ile diğer içeriklerin üstünde kalır */
+/* padding: Üst ve alt boşluklar */
+.nav {
+    background-color: #1a1a1a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* nav ul: Navigasyon bağlantılarının listesi */
+/* list-style: none ile madde işaretleri kaldırılır */
+/* display: flex ile bağlantılar yatay sıralanır */
+/* justify-content: center ile bağlantılar ortalanır */
+/* flex-wrap: wrap ile küçük ekranlarda bağlantılar alta kayar */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* nav li: Liste öğeleri (her bağlantı) */
+/* margin: Bağlantılar arası boşluk */
+.nav li {
+    margin: 0 15px;
+}
+
+/* nav a: Navigasyon bağlantıları */
+/* color: Beyaz yazı rengi, koyu arka planda öne çıkar */
+/* text-decoration: none ile bağlantı altı çizgisi kaldırılır */
+/* font-size: Yazı boyutu, okunabilir */
+/* padding: Bağlantı çevresinde tıklama alanı oluşturur */
+/* transition: Renk değişimi için yumuşak geçiş efekti */
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* nav a:hover: Bağlantı üzerine gelindiğinde */
+/* color: Hafif mavi, tıklanabilirliği vurgular */
+.nav a:hover {
+    color: #007bff;
+}
+
+/* Header: Logo ve site başlığı */
+/* margin-top: Navigasyon çubuğu sabit olduğu için boşluk */
+/* text-align: center ile içerikler ortalanır */
+/* padding: Üst ve alt boşluklar */
+/* background-color: Beyaz arka plan, temiz görünüm */
+/* box-shadow: Hafif gölge, kart efekti */
+.header {
+    margin-top: 60px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Ana sayfa header: Transparan arka plan, metnin üstünde */
+.index-body .header {
+    background-color: transparent; /* Arka plan transparan */
+    box-shadow: none; /* Gölge kaldırılır */
+    position: absolute; /* Mutlak konumlandırma */
+    top: 30%; /* Ana metnin üstüne yerleştirir */
+    left: 50%; /* Yatayda ortala */
+    transform: translate(-50%, -50%); /* Tam merkez için kaydırma */
+}
+.index-body .header h1 {
+    color: #fff; /* Yazı rengi beyaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Siyah gölge */
+}
+/* header .logo img: UFC logosu */
+/* width: 80px, dengeli boyut */
+/* vertical-align: middle ile logo hizalanır */
+.header .logo img {
+    width: 80px;
+    vertical-align: middle;
+}
+
+/* header h1: Site başlığı */
+/* font-size: Büyük yazı boyutu */
+/* color: Koyu gri, şık ve sade */
+/* margin-top: Logo ile başlık arası boşluk */
+/* text-shadow: Hafif gölge, modern görünüm */
+.header h1 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* main h2: Ana içerik başlıkları */
+/* font-size: Orta boy başlık */
+/* color: Koyu gri, ana yazı rengiyle uyumlu */
+/* margin-bottom: Altında boşluk */
+/* text-align: center ile ortalanır */
+/* text-shadow: Hafif gölge, şıklık katar */
+main h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* main p, main li: Paragraflar ve liste öğeleri */
+/* font-size: Okunabilir yazı boyutu */
+/* margin-bottom: Öğeler arası boşluk */
+main p, main li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Footer: İletişim bilgileri, sayfanın en altında */
+/* background-color: Koyu gri, ayrıştırıcı */
+/* color: Beyaz yazı rengi */
+/* text-align: center ile içerikler ortalanır */
+/* padding: Üst ve alt boşluklar */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+/* Ana sayfa footer: Transparan arka plan, yazılar görünür */
+.index-body .footer {
+    background-color: transparent; /* Arka plan transparan */
+    color: #fff; /* Yazılar beyaz, okunabilir */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Siyah gölge, kontrast için */
+}
+.index-body .footer .iletişim a {
+    color: #ffffff; /* Bağlantılar mavi */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Siyah gölge */
+}
+/* footer .iletişim a: İletişim bağlantıları */
+/* color: Hafif mavi, tıklanabilirlik için */
+/* text-decoration: none ile altı çizgisi kaldırılır */
+/* margin: Bağlantılar arası boşluk */
+.footer .iletişim a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* footer .iletişim a:hover: Bağlantı üzerine gelindiğinde */
+/* text-decoration: underline ile altı çizilir */
+.footer .iletişim a:hover {
+    text-decoration: underline;
+}
+
+/* Ana sayfa özel stilleri */
+/* .index.content p: Ana sayfadaki metin */
+/* font-size: Daha büyük yazı, vurgu için */
+/* text-align: center ile ortalanır */
+/* max-width: Metin genişliği sınırlı, okunabilir */
+/* Ana sayfa ana metin: Beyaz, siyah gölge, tam ortada */
+.index.content p {
+    font-size: 23px;
+    color: #fff; /* Yazı rengi beyaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Siyah gölge */
+    position: absolute; /* Mutlak konumlandırma */
+    top: 50%; /* Dikeyde ortala */
+    left: 50%; /* Yatayda ortala */
+    transform: translate(-50%, -50%); /* Tam merkez için kaydırma */
+    max-width: 800px; /* Maksimum genişlik */
+    text-align: center; /* Metin ortalı */
+}
+
+/* UFC Tarihi özel stilleri */
+/* .history.content ul, .history.content ol: Listeler */
+/* margin-left: Sol boşluk, hiyerarşi için */
+/* margin-bottom: Listeler arası boşluk */
+.history.content ul, .history.content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* .history.content hr: Yatay çizgi */
+/* border: 0 ile varsayılan çerçeve kaldırılır */
+/* border-top: İnce gri çizgi */
+/* margin: Üst ve alt boşluk */
+.history.content hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Dövüşçüler özel stilleri */
+/* .fighters .form: Favori dövüşçü formu */
+/* background-color: Beyaz, kart görünümü */
+/* padding: İç boşluk */
+/* border-radius: Köşeler yuvarlatılır */
+/* box-shadow: Hafif gölge, modern efekt */
+.fighters .form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* .fighters .form p: Form alanları */
+/* margin-bottom: Alanlar arası boşluk */
+.fighters .form p {
+    margin-bottom: 15px;
+}
+
+/* .fighters .form label: Etiketler */
+/* display: inline-block ile sabit genişlik */
+/* width: Etiket genişliği */
+/* font-weight: bold ile kalın yazı */
+.fighters .form label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+/* .fighters .form input: Metin, e-posta, telefon, sayı giriş alanları */
+/* width: Giriş alanı genişliği */
+/* padding: İç boşluk */
+/* border: İnce gri çerçeve */
+/* border-radius: Yuvarlak köşeler */
+.fighters .form input[type="text"],
+.fighters .form input[type="email"],
+.fighters .form input[type="tel"],
+.fighters .form input[type="number"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* .fighters .form button, input[type="reset"]: Form düğmeleri */
+/* padding: Düğme çevresi boşluk */
+/* border: none ile çerçeve kaldırılır */
+/* border-radius: Yuvarlak köşeler */
+/* background-color: Mavi, tıklanabilirlik için */
+/* color: Beyaz yazı */
+/* cursor: pointer ile tıklama imleci */
+/* margin-right: Düğmeler arası boşluk */
+.fighters .form button,
+.fighters .form input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* .fighters .form button:hover, input[type="reset"]:hover: Düğme üzerine gelindiğinde */
+/* background-color: Koyu mavi, etkileşimli görünüm */
+.fighters .form button:hover,
+.fighters .form input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* .fighters .iconic-fighters ol: İkonik dövüşçüler listesi */
+/* margin-left: Sol boşluk */
+/* columns: 2 ile iki sütunlu düzen */
+/* column-gap: Sütunlar arası boşluk */
+.fighters .iconic-fighters ol {
+    margin-left: 20px;
+    columns: 2;
+    column-gap: 40px;
+}
+
+/* Servetler özel stilleri */
+/* .networth .wealth-table: Servet tablosu */
+/* width: 100% ile tam genişlik */
+/* border-collapse: collapse ile hücre kenarlıkları birleşir */
+/* background-color: Beyaz, kart görünümü */
+/* box-shadow: Hafif gölge */
+.networth .wealth-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* .networth .wealth-table th, td: Tablo başlık ve hücreleri */
+/* padding: Hücre içi boşluk */
+/* text-align: left ile sola hizalı */
+/* border-bottom: İnce gri çizgi */
+.networth .wealth-table th,
+.networth .wealth-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .networth .wealth-table th: Tablo başlıkları */
+/* background-color: Koyu gri, başlık vurgusu */
+/* color: Beyaz yazı */
+.networth .wealth-table th {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* .networth .wealth-table tr:nth-child(even): Çift numaralı satırlar */
+/* background-color: Hafif gri, zebra efekti */
+.networth .wealth-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* .networth hr: Yatay çizgi */
+/* border: 0 ile varsayılan çerçeve kaldırılır */
+/* border-top: İnce gri çizgi */
+/* margin: Üst ve alt boşluk */
+.networth hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Haberler özel stilleri */
+/* .news .news-items: Haber kartları kapsayıcısı */
+/* display: flex ile kartlar yan yana */
+/* flex-wrap: wrap ile küçük ekranlarda alta kayar */
+/* gap: Kartlar arası boşluk */
+/* justify-content: center ile kartlar ortalanır */
+.news .news-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* .news .news-item: Tekil haber kartı */
+/* background-color: Beyaz, kart görünümü */
+/* padding: İç boşluk */
+/* border-radius: Yuvarlak köşeler */
+/* box-shadow: Hafif gölge */
+/* width: Sabit genişlik, haber resimleri için */
+.news .news-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 387px;
+    text-align: center;
+}
+
+/* .news .news-item img: Haber resimleri */
+/* max-width: 100% ile resim taşmaz */
+/* border-radius: Yuvarlak köşeler */
+.news .news-item img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* .news .news-item p: Haber başlıkları */
+/* margin-top: Resimle metin arası boşluk */
+/* font-weight: bold ile kalın yazı */
+.news .news-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* P4P Sıralaması özel stilleri */
+/* .p4p .ranking-table: P4P tablosu */
+/* width: 100% ile tam genişlik */
+/* border-collapse: collapse ile hücre kenarlıkları birleşir */
+/* background-color: Beyaz, kart görünümü */
+/* box-shadow: Hafif gölge */
+.p4p .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .p4p .ranking-table th, td: Tablo başlık ve hücreleri */
+/* padding: Hücre içi boşluk */
+/* text-align: left ile sola hizalı */
+/* border-bottom: İnce gri çizgi */
+.p4p .ranking-table th,
+.p4p .ranking-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .p4p .ranking-table th: Tablo başlıkları */
+/* background-color: Koyu gri, başlık vurgusu */
+/* color: Beyaz yazı */
+.p4p .ranking-table th {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* .p4p .ranking-table tr:nth-child(even): Çift numaralı satırlar */
+/* background-color: Hafif gri, zebra efekti */
+.p4p .ranking-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* PPV Rekorları özel stilleri */
+/* .ppv .match: Her maç bölümü */
+/* margin-bottom: Bölümler arası boşluk */
+.ppv .match {
+    margin-bottom: 20px;
+}
+
+/* .ppv .match h3: Maç başlıkları */
+/* font-size: Orta boy başlık */
+/* color: Koyu gri, ana yazı rengiyle uyumlu */
+/* margin-bottom: Altında boşluk */
+/* text-shadow: Hafif gölge, şıklık katar */
+.ppv .match h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .ppv .match ul: Maç bilgileri listesi */
+/* margin-left: Sol boşluk, hiyerarşi için */
+.ppv .match ul {
+    margin-left: 20px;
+}
+
+/* .ppv hr: Yatay çizgi */
+/* border: 0 ile varsayılan çerçeve kaldırılır */
+/* border-top: İnce gri çizgi */
+/* margin: Üst ve alt boşluk */
+.ppv hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Hakemler özel stilleri */
+/* .referee .referee-item: Hakem kartı */
+/* display: flex ile resim ve metin yan yana */
+/* flex-wrap: wrap ile küçük ekranlarda alta kayar */
+/* gap: İçerikler arası boşluk */
+/* background-color: Beyaz, kart görünümü */
+/* padding: İç boşluk */
+/* border-radius: Yuvarlak köşeler */
+/* box-shadow: Hafif gölge */
+/* margin-bottom: Kartlar arası boşluk */
+.referee .referee-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* .referee .referee-item .photo: Hakem resimleri */
+/* max-width: Resim genişliği sınırlı */
+/* border-radius: Yuvarlak köşeler */
+.referee .referee-item .photo {
+    max-width: 200px;
+    border-radius: 4px;
+}
+
+/* .referee .referee-item .info: Hakem bilgileri */
+/* flex: 1 ile kalan alanı doldurur */
+.referee .referee-item .info {
+    flex: 1;
+}
+
+/* .referee .referee-item .info h3: Hakem isimleri */
+/* font-size: Orta boy başlık */
+/* color: Koyu gri, ana yazı rengiyle uyumlu */
+/* margin-bottom: Altında boşluk */
+/* text-shadow: Hafif gölge, şıklık katar */
+.referee .referee-item .info h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .referee .referee-item .more-info: Daha fazla bilgi bağlantısı */
+/* display: inline-block ile bağlantı hizalanır */
+/* margin-top: Üstte boşluk */
+/* color: Hafif mavi, tıklanabilirlik için */
+/* text-decoration: none ile altı çizgisi kaldırılır */
+.referee .referee-item .more-info {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* .referee .referee-item .more-info:hover: Bağlantı üzerine gelindiğinde */
+/* text-decoration: underline ile altı çizilir */
+.referee .referee-item .more-info:hover {
+    text-decoration: underline;
+}
+
+/* .referee hr: Yatay çizgi */
+/* border: 0 ile varsayılan çerçeve kaldırılır */
+/* border-top: İnce gri çizgi */
+/* margin: Üst ve alt boşluk */
+.referee hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Responsive tasarım: Mobil cihazlar için */
+@media (max-width: 768px) {
+    .nav {
+        background-color: #1a1a1a; /* Siyah arka plan mobilde de korunsun */
+        padding: 0; /* Üstte boşluk bırakmaz */
+    }
+
+    .nav ul.nav-menu {
+        display: none; /* Varsayılan olarak gizli */
+        flex-direction: column;
+        text-align: center;
+        background-color: #1a1a1a; /* Siyah arka plan */
+        position: absolute;
+        top: 50px; /* Hamburger ikonunun altına yerleşir */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav ul.nav-menu.active {
+        display: flex; /* Tıklayınca görünür */
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Mobilde görünür */
+    }
+
+    .header {
+        margin-top: 60px; /* Nav bar yüksekliği için */
+    }
+
+    /* Ana sayfa için mobil düzenlemeler */
+    .index-body .header {
+        position: static; /* Mutlak konumlandırmayı kaldır */
+        transform: none; /* Merkezleme dönüşümünü kaldır */
+        background-color: transparent; /* Şeffaf arka plan korunsun */
+        box-shadow: none; /* Gölge kaldır */
+        padding: 10px 0; /* Daha az boşluk */
+        margin-top: 50px; /* Nav bar sonrası boşluk */
+    }
+
+    .index-body .header h1 {
+        font-size: 24px; /* Daha küçük başlık */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Gölge korunsun */
+    }
+
+    .index.content p {
+        position: static; /* Mutlak konumlandırmayı kaldır */
+        transform: none; /* Merkezleme dönüşümünü kaldır */
+        font-size: 18px; /* Daha küçük metin */
+        max-width: 90%; /* Genişlik sınırlı */
+        margin: 20px auto; /* Ortala ve boşluk ekle */
+        text-align: center; /* Ortalanmış metin */
+        color: #fff; /* Beyaz renk korunsun */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Gölge korunsun */
+    }
+
+    .fighters .iconic-fighters ol {
+        columns: 1;
+    }
+
+    .news .news-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .referee .referee-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .referee .referee-item .photo {
+        max-width: 100%;
+    }
+
+    .events .event-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .events .event-item {
+        width: 100%;
+    }
+}
+/* Etkinlikler özel stilleri */
+/* .events .event-list: Etkinlik kartları kapsayıcısı */
+.events .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* .events .event-item: Tekil etkinlik kartı */
+.events .event-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* .events .event-item h3: Etkinlik başlığı */
+.events .event-item h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .events .event-item p: Etkinlik bilgileri */
+.events .event-item p {
+    margin-bottom: 10px;
+}
+
+/* .events .event-item a: Bilet bağlantısı */
+.events .event-item a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* .events .event-item a:hover: Bağlantı üzerine gelindiğinde */
+.events .event-item a:hover {
+    background-color: #0056b3;
+}
+
+/* AI tahmini bölümü */
+.events .ai-prediction {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* .events .ai-prediction h3: Tahmin başlığı */
+.events .ai-prediction h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .events .ai-prediction select: Etkinlik seçimi dropdown */
+.events .ai-prediction select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* .events .ai-prediction button: Tahmin Yap düğmesi */
+.events .ai-prediction button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* .events .ai-prediction button:hover: Düğme üzerine gelindiğinde */
+.events .ai-prediction button:hover {
+    background-color: #0056b3;
+}
+
+/* .events .ai-prediction #predictionResult: Tahmin sonucu */
+.events .ai-prediction #predictionResult {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Rekorlar özel stilleri */
+/* .records .record-section: Her rekor bölümü */
+.records .record-section {
+    margin-bottom: 20px;
+}
+
+/* .records .record-section h3: Rekor başlıkları */
+.records .record-section h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .records .record-table: Rekor tabloları */
+.records .record-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* .records .record-table th, td: Tablo başlık ve hücreleri */
+.records .record-table th,
+.records .record-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .records .record-table th: Tablo başlıkları */
+.records .record-table th {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* .records .record-table tr:nth-child(even): Çift numaralı satırlar */
+.records .record-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* .records .record-section ul: Liste öğeleri */
+.records .record-section ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* .records hr: Yatay çizgi */
+.records hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+/* Merak Edilenler özel stilleri */
+/* .faq .faq-item: Her SSS bölümü */
+.faq .faq-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* .faq .faq-item h3: Soru başlıkları */
+.faq .faq-item h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .faq .faq-item p: Cevap metinleri */
+.faq .faq-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* .faq hr: Yatay çizgi */
+.faq hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+.nav a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none; /* Masaüstünde gizli */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100; /* Üstte görünmesi için */
+    font-size: 24px; /* Sembolün boyutu */
+    color: #fff; /* Sembolün rengi */
+}
+
+.hamburger-icon {
+    font-family: Arial, Helvetica, sans-serif; /* Güvenli bir font */
+    line-height: 1;
+}
