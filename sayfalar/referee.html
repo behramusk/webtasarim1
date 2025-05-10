@@ -1,60 +1,82 @@
-<!DOCTYPE html>
+<!DOCTYPE htm
 <html lang="tr">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFC Hakemleri</title>
+    
+    <title>Hakemler - UFC Türkiye</title>
+    
     <link rel="shortcut icon" href="../resimler/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style/referee.css">
+    
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
-    <div class="ortalama">
-        <img src="../resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
-    </div>
+<body class="referee-body">
+   
+    <nav class="nav">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-menu">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="fighters.html">Dövüşçüler</a></li>
+            <li><a href="p4p.html">P4P Sıralaması</a></li>
+            <li><a href="history.html">UFC Tarihi</a></li>
+            <li><a href="news.html">Haberler</a></li>
+            <li><a href="ppv.html">PPV Rekorları</a></li>
+            <li><a href="referee.html">Hakemler</a></li>
+            <li><a href="networth.html">Servetler</a></li>
+            <li><a href="events.html">Etkinlikler</a></li>
+            <li><a href="records.html">Rekorlar</a></li>
+            <li><a href="faq.html">Merak Edilenler</a></li>
+        </ul>
+    </nav>
 
-    <h1 class="ortalama">UFC’NİN EN TANINAN HAKEMLERİ</h1>
-
-    <div class="hakem">
-        <img src="../resimler/john.jpg" alt="Big John McCarthy" class="foto">
-        <div class="bilgi">
-            <h2>"Big" John McCarthy</h2>
-            <p>Bilgi: UFC'nin en ikonik hakemlerinden biri olarak kabul edilir. Karma dövüş sanatlarının (MMA) erken dönemlerinde, 1990'ların başında UFC'de hakemlik yapmaya başladı ve sporun kurallarının şekillenmesinde etkili oldu. "Big" John, hem dövüşçülerin güvenliğini koruma konusundaki titizliği hem de sakin ve otoriter tavrıyla tanınır. Ayrıca MMA tarihinde ilk hakem eğitimi programlarını geliştiren isimlerden biridir. UFC 2'den itibaren görev almış ve yüzlerce maçı yönetmiştir.</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
         </div>
-        <a href="https://en.wikipedia.org/wiki/John_McCarthy_(referee)" target="_blank" class="link">Daha fazla bilgi için tıklayınız</a>
-    </div>
+        <h1>UFC Türkiye</h1>
+    </header>
 
-    <hr>
+    <!-- Hakem bilgileri -->
+    <main class="referee content">
+        <h2>UFC’nin En Tanınan Hakemleri</h2>
+        <section class="referee-item">
+            <img src="../resimler/john.jpg" alt="Big John McCarthy" class="photo">
+            <div class="info">
+                <h3>"Big" John McCarthy</h3>
+                <p>Bilgi: UFC'nin en ikonik hakemlerinden biri olarak kabul edilir. Karma dövüş sanatlarının (MMA) erken dönemlerinde, 1990'ların başında UFC'de hakemlik yapmaya başladı ve sporun kurallarının şekillenmesinde etkili oldu. "Big" John, hem dövüşçülerin güvenliğini koruma konusundaki titizliği hem de sakin ve otoriter tavrıyla tanınır. Ayrıca MMA tarihinde ilk hakem eğitimi programlarını geliştiren isimlerden biridir. UFC 2'den itibaren görev almış ve yüzlerce maçı yönetmiştir.</p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/John_McCarthy_(referee)" target="_blank" class="more-info">Daha fazla bilgi için tıklayınız</a>
+        </section>
+        <hr>
+        <section class="referee-item">
+            <img src="../resimler/herb.jpg" alt="Herb Dean" class="photo">
+            <div class="info">
+                <h3>Herb Dean</h3>
+                <p>Bilgi: Günümüz UFC'sinin en tanınmış ve aktif hakemlerinden biridir. 2000'li yılların başından beri hakemlik yapmaktadır ve sakin, profesyonel yaklaşımıyla bilinir. Herb Dean, zorlu durumlarda hızlı ve doğru kararlar verme yeteneğiyle saygı görür, ancak bazı tartışmalı kararları da (örneğin, geç ya da erken durdurmalar) eleştirilere neden olmuştur. MMA topluluğunda "altın standart" hakemlerden biri olarak anılır.</p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Herb_Dean" target="_blank" class="more-info">Daha fazla bilgi için tıklayınız</a>
+        </section>
+        <hr>
+        <section class="referee-item">
+            <img src="../resimler/mario.jpg" alt="Mario Yamasaki" class="photo">
+            <div class="info">
+                <h3>Mario Yamasaki</h3>
+                <p>Bilgi: Brezilyalı hakem Mario Yamasaki, UFC'de uzun yıllar görev yapmış, ancak tartışmalı kararlarıyla sıkça gündeme gelmiştir. Agresif dövüşlerde müdahale etmekte gecikmesi veya erken durdurmalarıyla eleştirilmiştir. Yine de MMA'deki deneyimi ve kendine özgü tarzıyla tanınır. Yamasaki, hakemlik kariyerinde 400'ün üzerinde profesyonel maçı yönetmiştir, ancak son yıllarda UFC'de daha az görünür olmuştur.</p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Mario_Yamasaki" target="_blank" class="more-info">Daha fazla bilgi için tıklayınız</a>
+        </section>
+        <hr>
+    </main>
 
-    <div class="hakem">
-        <img src="../resimler/herb.jpg" alt="Herb Dean" class="foto">
-        <div class="bilgi">
-            <h2>Herb Dean</h2>
-            <p>Bilgi: Günümüz UFC'sinin en tanınmış ve aktif hakemlerinden biridir. 2000'li yılların başından beri hakemlik yapmaktadır ve sakin, profesyonel yaklaşımıyla bilinir. Herb Dean, zorlu durumlarda hızlı ve doğru kararlar verme yeteneğiyle saygı görür, ancak bazı tartışmalı kararları da (örneğin, geç ya da erken durdurmalar) eleştirilere neden olmuştur. MMA topluluğunda "altın standart" hakemlerden biri olarak anılır.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="iletişim">
+            <a href="mailto:behrammusuk@gmail.com">Bize Ulaşın</a> |
+            <a href="tel:+905455218977">İletişim</a>
         </div>
-        <a href="https://en.wikipedia.org/wiki/Herb_Dean" target="_blank" class="link">Daha fazla bilgi için tıklayınız</a>
-    </div>
-
-    <hr>
-
-    <div class="hakem">
-        <img src="../resimler/mario.jpg" alt="Mario Yamasaki" class="foto">
-        <div class="bilgi">
-            <h2>Mario Yamasaki</h2>
-            <p>Bilgi: Brezilyalı hakem Mario Yamasaki, UFC'de uzun yıllar görev yapmış, ancak tartışmalı kararlarıyla sıkça gündeme gelmiştir. Agresif dövüşlerde müdahale etmekte gecikmesi veya erken durdurmalarıyla eleştirilmiştir. Yine de MMA'deki deneyimi ve kendine özgü tarzıyla tanınır. Yamasaki, hakemlik kariyerinde 400'ün üzerinde profesyonel maçı yönetmiştir, ancak son yıllarda UFC'de daha az görünür olmuştur.</p>
-        </div>
-        <a href="https://en.wikipedia.org/wiki/Mario_Yamasaki" target="_blank"  class="link">Daha fazla bilgi için tıklayınız</a>
-    </div>
-
-    <hr>
-
-    <div class="ortalama">
-        <a href="../index.html" class="navigasyon">Ana Sayfa</a> |
-        <a href="fighters.html" class="navigasyon">Dövüşçüler</a> |
-        <a href="news.html" class="navigasyon">Haberler</a> |
-        <a href="p4p.html" class="navigasyon">P4P Sıralaması</a> |
-        <a href="ppv.html" class="navigasyon">PPV Rekorları</a> |
-        <a href="referee.html" class="navigasyon">Hakemler</a> |
-        <a href="networth.html" class="navigasyon">Servetler</a>
-    </div>
+    </footer>
+    <script src="../java/myscript.js"></script>
 </body>
 </html>
