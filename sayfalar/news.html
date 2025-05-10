@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haberler</title>
+    
+    <title>Haberler - UFC Türkiye</title>
+   
     <link rel="shortcut icon" href="../resimler/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style/news.css">
+    
+     <link rel="stylesheet" href="../style/style.css">
 </head>
+<body class="news-body">
+    
+    <nav class="nav">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-menu">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="fighters.html">Dövüşçüler</a></li>
+            <li><a href="p4p.html">P4P Sıralaması</a></li>
+            <li><a href="history.html">UFC Tarihi</a></li>
+            <li><a href="news.html">Haberler</a></li>
+            <li><a href="ppv.html">PPV Rekorları</a></li>
+            <li><a href="referee.html">Hakemler</a></li>
+            <li><a href="networth.html">Servetler</a></li>
+            <li><a href="events.html">Etkinlikler</a></li>
+            <li><a href="records.html">Rekorlar</a></li>
+            <li><a href="faq.html">Merak Edilenler</a></li>
+        </ul>
+    </nav>
 
-<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
+        </div>
+        <h1>UFC Türkiye</h1>
+    </header>
 
-    <div class="ortalama">
-        <img src="../resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
-    </div>
+    <!--Haberler -->
+    <main class="news content">
+        <h2>UFC Haberleri</h2>
+        <div class="news-items">
+            <div class="news-item">
+                <img src="../resimler/haber.png" alt="Jose Mourinho" width="387" height="211" usemap="#haber1">
+                <map name="haber1">
+                    <area shape="rect" coords="173,95,213,115"
+                        href="https://www.ntvspor.net/foto-galeri/jose-mourinho-ufc-icin-londra-da-67df2a01e9e3a003f60b4bca"
+                        alt="Mourinho" target="_blank">
+                </map>
+                <p>Jose Mourinho, UFC İçin Londra’da.</p>
+            </div>
 
-    <h1 class="baslik">UFC HABERLERİ</h1>
+            <div class="news-item">
+                <img src="../resimler/haber1.png" alt="Viral Sevinç" width="387" height="211" usemap="#haber2">
+                <map name="haber2">
+                    <area shape="rect" coords="173,95,213,115"
+                        href="https://www.ntvspor.net/diger-sporlar/tarihin-en-iyisinden-viral-olan-sevinc-tribunde-oturan-trump-i-isaret-etti-673ae973a7fea403f7d82112"
+                        alt="Sevinç" target="_blank">
+                </map>
+                <p>Tarihin En İyisinden Viral Olan Sevinç!</p>
+            </div>
 
-    <div class="haber-basliklari">
-
-        <div class="haber-tiklama">
-            <img src="../resimler/haber.png" alt="Jose Mourinho" width="387" height="211" usemap="#haber1">
-            <map name="haber1">
-                <area shape="rect" coords="173,95,213,115"
-                    href="https://www.ntvspor.net/foto-galeri/jose-mourinho-ufc-icin-londra-da-67df2a01e9e3a003f60b4bca"
-                    alt="Mourinho" target="_blank">
-            </map>
-            <p class="haber-basliklari">Jose Mourinho, UFC İçin Londra’da.</p>
+            <div class="news-item">
+                <img src="../resimler/haber2.png" alt="Nakavt" width="387" height="211" usemap="#haber3">
+                <map name="haber3">
+                    <area shape="rect" coords="173,95,213,115"
+                        href="https://www.ntvspor.net/diger-sporlar/ufc-yildizini-taninmaz-hale-getiren-nakavt-hastaneden-son-halini-paylasti-6641fa4e7b22ae0053471df5"
+                        alt="Nakavt" target="_blank">
+                </map>
+                <p>UFC Yıldızını Tanınmaz Hale Getiren Nakavt!</p>
+            </div>
         </div>
 
-        <div class="haber-tiklama">
-            <img src="../resimler/haber1.png" alt="Viral Sevinç" width="387" height="211" usemap="#haber2">
-            <map name="haber2">
-                <area shape="rect" coords="173,95,213,115"
-                    href="https://www.ntvspor.net/diger-sporlar/tarihin-en-iyisinden-viral-olan-sevinc-tribunde-oturan-trump-i-isaret-etti-673ae973a7fea403f7d82112"
-                    alt="Sevinç" target="_blank">
-            </map>
-            <p class="haber-basliklari">Tarihin En İyisinden Viral Olan Sevinç!</p>
-        </div>
-
-        <div class="haber-tiklama">
-            <img src="../resimler/haber2.png" alt="Nakavt" width="387" height="211" usemap="#haber3">
-            <map name="haber3">
-                <area shape="rect" coords="173,95,213,115"
-                    href="https://www.ntvspor.net/diger-sporlar/ufc-yildizini-taninmaz-hale-getiren-nakavt-hastaneden-son-halini-paylasti-6641fa4e7b22ae0053471df5"
-                    alt="Nakavt" target="_blank">
-            </map>
-            <p class="haber-basliklari">UFC Yıldızını Tanınmaz Hale Getiren Nakavt!</p>
-        </div>
-    </div>
-
-    <br><br><br><br><br><br><br><br>
-
-    <div class="ortalama">
         <p>Not: İlgili haberlere ulaşmak için resimlerin ortasına tıklayabilirsiniz.</p>
-    </div>
+    </main>
 
-    <br><br><br>
-
-    <div class="ortalama">
-        <a href="../index.html" class="navigasyon">Ana Sayfa</a> |
-        <a href="history.html" class="navigasyon">UFC Tarihi</a> |
-        <a href="fighters.html" class="navigasyon">Dövüşçüler</a> |
-        <a href="p4p.html" class="navigasyon">P4P Sıralaması</a> |
-        <a href="ppv.html" class="navigasyon" >PPV Rekorları </a> |
-        <a href="referee.html"class="navigasyon"> Hakemler </a> |
-        <a href="networth.html" class="navigasyon">Servetler</a>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="iletişim">
+            <a href="mailto:behrammusuk@gmail.com">Bize Ulaşın</a> |
+            <a href="tel:+905455218977">İletişim</a>
+        </div>
+    </footer>
+       <script src="../java/myscript.js"></script>
 </body>
-
 </html>
