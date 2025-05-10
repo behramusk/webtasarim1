@@ -2,33 +2,58 @@
 <html lang="tr">
 
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>UFC Türkiye</title>
+    
     <link rel="shortcut icon" href="resimler/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style/indexstyle.css">
+    
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-    <div class="logo">
-        <img src="resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
-    </div>
-    <h1>UFC TÜRKİYE</h1>
-    <p>UFC hakkında en güncel bilgiler, dövüşçü istatistikleri ve etkinlik detayları.</p>
-    <div>
-        <a href="sayfalar/fighters.html">Dövüşçüler</a> |
-        <a href="sayfalar/p4p.html">P4P Sıralaması</a> |
-        <a href="sayfalar/history.html">UFC Tarihi</a> |
-        <a href="sayfalar/news.html">Haberler</a> |
-        <a href="sayfalar/ppv.html"> PPV Rekorları</a> |
-        <a href="sayfalar/referee.html" class="navigasyon"> Hakemler </a> |
-        <a href="sayfalar/networth.html" class="navigasyon">Servetler</a>
-    </div>
-    <div class="iletişim">
+<body class="index-body">
+    <!-- Navigasyon çubuğu -->
+    <nav class="nav">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-        <a href="mailto:behrammusuk@gmail.com">Bize Ulaşın</a>
+        <ul class="nav-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="sayfalar/fighters.html">Dövüşçüler</a></li>
+            <li><a href="sayfalar/p4p.html">P4P Sıralaması</a></li>
+            <li><a href="sayfalar/history.html">UFC Tarihi</a></li>
+            <li><a href="sayfalar/news.html">Haberler</a></li>
+            <li><a href="sayfalar/ppv.html">PPV Rekorları</a></li>
+            <li><a href="sayfalar/referee.html">Hakemler</a></li>
+            <li><a href="sayfalar/networth.html">Servetler</a></li>
+            <li><a href="sayfalar/events.html">Etkinlikler</a></li>
+            <li><a href="sayfalar/records.html">Rekorlar</a></li>
+            <li><a href="sayfalar/faq.html">Merak Edilenler</a></li>
+        </ul>
+    </nav>
 
-        <a href="tel:+905455218977">İletişim</a>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="resimler/ufclogo.png" alt="UFC Logosu" width="80" height="40">
+        </div>
+        <h1>UFC Türkiye</h1>
+    </header>
+
+    <!-- Ortada yer alan yazı -->
+    <main class="index content">
+        <p>UFC hakkında en güncel bilgiler, dövüşçü istatistikleri ve etkinlik detayları.</p>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="iletişim">
+            <a href="mailto:behrammusuk@gmail.com">Bize Ulaşın</a> |
+            <a href="tel:+905455218977">İletişim</a>
+        </div>
+    </footer>
+    <script src="java/myscript.js"></script>
+</body>
 
 </html>
